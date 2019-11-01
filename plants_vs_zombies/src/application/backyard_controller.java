@@ -14,20 +14,26 @@ import javafx.animation.TranslateTransition;
 
 public class backyard_controller implements Initializable{
 	
-	@FXML
-	private Pane peashooter1_peaPane;
 	
 	@FXML
 	private ImageView test;
 	
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
+		
+		
 		TranslateTransition transition = new TranslateTransition();
-		transition.setDuration(Duration.seconds(1));
+		transition.setDuration(Duration.seconds(4));
 		transition.setNode(test);
 		
-		transition.setToY(-200);
-		transition.setAutoReverse(true);
+//		transition.setFromX(0);
+//		transition.setFromY(0);
+		test.setLayoutX(316);
+		test.setLayoutY(93);
+		
+		transition.setToX(1008);
+//		transition.setByX(200);
+//		transition.setAutoReverse(true);
 		transition.setCycleCount(TranslateTransition.INDEFINITE);
 		transition.play();
 	}
